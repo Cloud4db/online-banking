@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2> cloud4db</h2>
+<h2>Welcome to Cloud4db</h2>
 </body>
 </html>
