@@ -12,7 +12,7 @@ pipeline {
                 sh 'echo  "Deploying to tomcat server" '
                 sshagent(['tomcat-agent']) {
                    sh "  scp -o StrictHostKeyChecking=no target/*.war ec2-user@13.233.197.170:/var/lib/tomcat9/webapps/ROOT "
-                    sh "ssh ec2-user@13.233.197.170 ls /var/lib/tomcat9/webapps/ROOT/"
+                    sh "ssh ec2-user@13.233.197.170 unzip *.war /var/lib/tomcat9/webapps/ROOT/online-banking"
                 }
             }
         }
