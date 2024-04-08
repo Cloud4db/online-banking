@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'echo  "Deploying to tomcat server" '
                 sshagent(['tomcat-agent']) {
-                   sh " sudo scp -o StrictHostKeyChecking=no target/*.war root@3.6.90.203:/var/lib/tomcat9/webapps/ROOT"
+                   sh " sudo scp -o StrictHostKeyChecking=no target/*.war tomcat@3.6.90.203:/var/lib/tomcat9/webapps/ROOT"
                 }
             }
         }
